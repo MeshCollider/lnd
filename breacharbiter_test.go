@@ -866,7 +866,7 @@ func testRetributionStoreForAll(
 	var isRestart bool
 
 restartCheck:
-	// Construct a set of all channel points presented by the store. Entires
+	// Construct a set of all channel points presented by the store. Entries
 	// are only be added to the set if their corresponding retribution
 	// infromation matches the test vector.
 	var foundSet = make(map[wire.OutPoint]struct{})

@@ -941,7 +941,7 @@ type updateLog struct {
 	// htlcCounter is a monotonically increasing integer that tracks the
 	// total number of offered HTLC's by the owner of this update log. We
 	// use a distinct index for this purpose, as update's that remove
-	// entires from the log will be indexed using this counter.
+	// entries from the log will be indexed using this counter.
 	htlcCounter uint64
 
 	// List is the updatelog itself, we embed this value so updateLog has

@@ -14,7 +14,7 @@ import (
 //  Output: 0b000000000000000000000000000000000000000[01100] == 12
 func bitsToIndex(bs ...uint64) (index, error) {
 	if len(bs) > 64 {
-		return 0, errors.New("number of elements should be lower then" +
+		return 0, errors.New("number of elements should be lower than" +
 			" 64")
 	}
 
@@ -134,7 +134,7 @@ func generateTests(t *testing.T) []deriveTest {
 		t.Fatalf("can't generate from index: %v", err)
 	}
 	tests = append(tests, deriveTest{
-		name:       "'from' index greater then 'to' index",
+		name:       "'from' index greater than 'to' index",
 		from:       from,
 		to:         to,
 		shouldFail: true,

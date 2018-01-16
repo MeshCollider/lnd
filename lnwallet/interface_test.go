@@ -537,7 +537,7 @@ func testFundingCancellationNotEnoughFunds(miner *rpctest.Harness,
 	}
 }
 
-func testCancelNonExistantReservation(miner *rpctest.Harness,
+func testCancelNonExistentReservation(miner *rpctest.Harness,
 	alice, _ *lnwallet.LightningWallet, t *testing.T) {
 
 	feeRate, err := alice.Cfg.FeeEstimator.EstimateFeePerWeight(1)
@@ -1477,7 +1477,7 @@ var walletTests = []walletTestCase{
 	},
 	{
 		name: "test cancel non-existent reservation",
-		test: testCancelNonExistantReservation,
+		test: testCancelNonExistentReservation,
 	},
 	{
 		name: "reorg wallet balance",
