@@ -1581,7 +1581,6 @@ func (s *server) removePeer(p *peer) {
 // initiation of a channel funding workflow to the peer with either the
 // specified relative peer ID, or a global lightning  ID.
 type openChanReq struct {
-	targetPeerID int32
 	targetPubkey *btcec.PublicKey
 
 	chainHash chainhash.Hash
@@ -1770,7 +1769,6 @@ func (s *server) OpenChannel(peerID int32, nodeKey *btcec.PublicKey,
 	// instead of blocking on this request which is exported as a
 	// synchronous request to the outside world.
 	req := &openChanReq{
-		targetPeerID:        peerID,
 		targetPubkey:        nodeKey,
 		chainHash:           *activeNetParams.GenesisHash,
 		localFundingAmt:     localAmt,

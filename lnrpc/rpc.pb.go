@@ -1567,13 +1567,6 @@ func (m *OpenChannelRequest) String() string            { return proto.CompactTe
 func (*OpenChannelRequest) ProtoMessage()               {}
 func (*OpenChannelRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{41} }
 
-func (m *OpenChannelRequest) GetTargetPeerId() int32 {
-	if m != nil {
-		return m.TargetPeerId
-	}
-	return 0
-}
-
 func (m *OpenChannelRequest) GetNodePubkey() []byte {
 	if m != nil {
 		return m.NodePubkey
